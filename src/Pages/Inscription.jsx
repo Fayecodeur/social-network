@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import React from "react";
 import toast, { Toaster } from "react-hot-toast";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Inscription() {
   const navigate = useNavigate();
@@ -175,6 +175,14 @@ export default function Inscription() {
             >
               Inscription
             </Button>
+            <Typography
+              sx={{
+                textAlign: "center",
+              }}
+            >
+              Déja un compte?
+              <Link to={"/connexion"}> Cliquez ici</Link>
+            </Typography>
           </Stack>
         </form>
       </Box>

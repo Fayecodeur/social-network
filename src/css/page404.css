@@ -1,0 +1,44 @@
+/* Page404.css */
+.page404-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  .page404-title {
+    font-size: 100px;
+    color: #ff5733;
+    margin: 0;
+  }
+  
+  .page404-message {
+    font-size: 24px;
+    color: #555;
+  }
+  
+  .page404-image {
+    width: 300px;
+    height: auto;
+    margin: 20px 0;
+  }
+  
+  .page404-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #5f33ff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+  
+  .page404-button:hover {
+    background-color: #5f33ff;
+  }
+  

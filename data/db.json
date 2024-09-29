@@ -6,6 +6,13 @@
       "nom": "Doe",
       "email": "doe@live.com",
       "mdp": "123456"
+    },
+    {
+      "id": "7213",
+      "prenom": "Marie",
+      "nom": "Doe",
+      "email": "marie@gmail.com",
+      "mdp": "123456"
     }
   ]
 }
