@@ -9,6 +9,10 @@ import { Toaster } from "react-hot-toast";
 
 const routes = createBrowserRouter([
   {
+    path: "/",
+    element: <Connexion />,
+  },
+  {
     path: "/dashboard",
     element: <Dashboard />,
   },

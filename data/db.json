@@ -14,5 +14,16 @@
       "email": "marie@gmail.com",
       "mdp": "123456"
     }
+  ],
+  "publications": [
+    {
+      "id": "8551",
+      "post": "Hello",
+      "url": "https://img.freepik.com/photos-gratuite/portrait-jeune-etudiant-africain-heureux_171337-8887.jpg?t=st=1727693037~exp=1727696637~hmac=08143f1769dfad48edc89bfdfe7612a8756c94f9bf16a0a094432dabda2ffd9e&w=740",
+      "id_utilisateur": "7213",
+      "date_publication": "2024-09-30T10:48:41.678Z",
+      "nombre_like": 0,
+      "auteur": "Marie Doe"
+    }
   ]
 }

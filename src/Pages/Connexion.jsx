@@ -59,7 +59,9 @@ export default function Inscription() {
           // Vérifier si le mot de passe est correct
           if (utilisateur.mdp === mdp) {
             toast.success("Connexion réussie");
-            sessionStorage.setItem("user", "isLogged");
+            // Extraire uniquement le prenom, nom, et id
+            const { prenom, nom, id } = utilisateur;
+            sessionStorage.setItem("user", JSON.stringify({ prenom, nom, id }));
             navigate("/dashboard"); // Redirection après connexion réussie
           } else {
             toast.error("Identifiants incorrects");
