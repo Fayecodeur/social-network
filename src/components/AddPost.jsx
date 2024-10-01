@@ -1,18 +1,35 @@
-import { Stack, Box, Typography } from "@mui/material";
+import { Stack, Typography } from "@mui/material";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import React from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { useForm } from "react-hook-form";
 import axios from "axios";
+import { Mutation, useMutation, useQueryClient } from "@tanstack/react-query";
+import { useQuery } from "@tanstack/react-query";
 
 export default function AddPost() {
+  const url = "http://localhost:3000/publications";
   const {
     register,
     handleSubmit,
     reset,
     formState: { errors },
   } = useForm();
+  const useQuery = useQueryClient();
+  const mutation = useMutation({
+    mutationFn: (pub) => {
+      return axios.post(url, pub);
+    },
+    onError: (error) => {
+      toast.error("Une erreure est surveneue");
+    },
+    onSuccess: () => {
+      reset();
+      useQuery.invalidateQueries();
+      toast.success("Publication ajoutée avec succés");
+    },
+  });
 
   const validatePostDescription = (post) => {
     if (!post) {
@@ -46,18 +63,7 @@ export default function AddPost() {
         nombre_like: 0,
         auteur: `${user.prenom} ${user.nom}`, // Utiliser le prénom et le nom de l'utilisateur
       };
-
-      try {
-        // Envoyer la requête POST avec axios
-        const response = await axios.post(
-          "http://localhost:3000/publications",
-          publication
-        );
-        toast.success("Publication ajoutée avec succès");
-        reset();
-      } catch (error) {
-        toast.error("Erreur lors de l'ajout de la publication");
-      }
+      mutation.mutate(publication);
     }
   };
 

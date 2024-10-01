@@ -24,6 +24,15 @@
       "date_publication": "2024-09-30T10:48:41.678Z",
       "nombre_like": 0,
       "auteur": "Marie Doe"
+    },
+    {
+      "id": "e44e",
+      "post": "Salut les amis",
+      "url": "https://img.freepik.com/photos-gratuite/portrait-etudiant-africain-drole-t-shirt-vert-photo-garcon-noir-heureux-dans-verres-tenant-livres-manuels-apres-examens_197531-20134.jpg?t=st=1727808902~exp=1727812502~hmac=5ccc7c8f67a086542a41f7c29e84b4b59530490ca4b833cbc533a9ccf8b91276&w=740",
+      "id_utilisateur": "7213",
+      "date_publication": "2024-10-01T18:55:33.466Z",
+      "nombre_like": 0,
+      "auteur": "Marie Doe"
     }
   ]
 }
